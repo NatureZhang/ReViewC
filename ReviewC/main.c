@@ -6,6 +6,10 @@
 //  Copyright © 2016年 __Nature__. All rights reserved.
 //
 
+/*
+ Review 指针 数组 字符串 结构体
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include "string.h"
