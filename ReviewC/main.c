@@ -7,9 +7,27 @@
 //
 
 #include <stdio.h>
+#include <string.h>
+#include "string.h"
+
+#define STR_LEN 30
+
+void testMyStrCopy() {
+    
+    char *strSrc = "www.baidu.com";
+    char strCpy[STR_LEN];
+    memset(strCpy, 0, STR_LEN);
+    
+    printf("strCpy = %s\n", strCpy);
+    myStrCopy(strCpy, strSrc);
+    printf("strCpy = %s\n", strCpy);
+    
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    
+    testMyStrCopy();
+    
     return 0;
 }
+
