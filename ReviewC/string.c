@@ -23,3 +23,37 @@ char *myStrCopy(char *strCpy, const char *strSrc) {
     };
         return tmpStr;
 }
+
+// 长度
+int myStrlen(const char *strSrc) {
+    
+    int count = 0;
+    while (*strSrc++ != '\0') {
+        count ++;
+    }
+    
+    return count;
+}
+
+// 字符串拼接
+char *myStrcat(char *dest, const char *strSrc) {
+    
+    return NULL;
+}
+
+
+//
+//// 比较
+//int	 myStrcmp(const char *str1, const char *str2) {
+//    
+//}
+
+// 小写
+void strlower(char *strSrc) {
+    
+}
+
+// 大写
+void strupper(char *strSrc) {
+    
+}

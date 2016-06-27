@@ -26,6 +26,10 @@ void testMyStrCopy() {
     myStrCopy(strCpy, strSrc);
     printf("strCpy = %s\n", strCpy);
     
+    printf("strlen = %d \n", myStrlen(strSrc));
+    
+    char *str2 = ".cn";
+    printf("str = %s\n", myStrcat(strSrc, str2));
 }
 
 int main(int argc, const char * argv[]) {
