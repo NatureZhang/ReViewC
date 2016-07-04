@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92880431D2A01E1001545B3 /* sort.c in Sources */ = {isa = PBXBuildFile; fileRef = D92880411D2A01E1001545B3 /* sort.c */; };
+		D92880461D2A0234001545B3 /* search.c in Sources */ = {isa = PBXBuildFile; fileRef = D92880441D2A0234001545B3 /* search.c */; };
 		D9A6BB411D20EADF0027A677 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D9A6BB401D20EADF0027A677 /* main.c */; };
 		D9A6BB491D20EAFA0027A677 /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = D9A6BB471D20EAFA0027A677 /* string.c */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D92880411D2A01E1001545B3 /* sort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sort.c; sourceTree = "<group>"; };
+		D92880421D2A01E1001545B3 /* sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sort.h; sourceTree = "<group>"; };
+		D92880441D2A0234001545B3 /* search.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = search.c; sourceTree = "<group>"; };
+		D92880451D2A0234001545B3 /* search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = search.h; sourceTree = "<group>"; };
 		D9A6BB3D1D20EADF0027A677 /* ReviewC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReviewC; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A6BB401D20EADF0027A677 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D9A6BB471D20EAFA0027A677 /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string.c; sourceTree = "<group>"; };
@@ -63,6 +69,10 @@
 				D9A6BB401D20EADF0027A677 /* main.c */,
 				D9A6BB481D20EAFA0027A677 /* string.h */,
 				D9A6BB471D20EAFA0027A677 /* string.c */,
+				D92880411D2A01E1001545B3 /* sort.c */,
+				D92880421D2A01E1001545B3 /* sort.h */,
+				D92880441D2A0234001545B3 /* search.c */,
+				D92880451D2A0234001545B3 /* search.h */,
 			);
 			path = ReviewC;
 			sourceTree = "<group>";
@@ -123,8 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92880431D2A01E1001545B3 /* sort.c in Sources */,
 				D9A6BB491D20EAFA0027A677 /* string.c in Sources */,
 				D9A6BB411D20EADF0027A677 /* main.c in Sources */,
+				D92880461D2A0234001545B3 /* search.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +257,7 @@
 				D9A6BB461D20EADF0027A677 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

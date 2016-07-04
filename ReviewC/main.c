@@ -30,6 +30,13 @@ void testMyStrCopy() {
     
     char *str2 = ".cn";
     printf("str = %s\n", myStrcat(strSrc, str2));
+    
+    int a[] = {1, 2, 3, 4, 5};
+    printf("%lu \n", sizeof(a));
+
+    char *b = "www.google.com";
+    printf(" b %s \n ", b);
+    
 }
 
 int main(int argc, const char * argv[]) {
