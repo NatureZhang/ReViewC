@@ -13,35 +13,47 @@
 #include <stdio.h>
 #include <string.h>
 #include "string.h"
-
+#include "sort.h"
 #define STR_LEN 30
 
 void testMyStrCopy() {
     
     char *strSrc = "www.baidu.com";
-    char strCpy[STR_LEN];
-    memset(strCpy, 0, STR_LEN);
+    char a[80];
     
-    printf("strCpy = %s\n", strCpy);
-    myStrCopy(strCpy, strSrc);
-    printf("strCpy = %s\n", strCpy);
+    // fuck 怎么不管用
+//    printf("copy str:%s \n", myStrCopy(a,));
     
-    printf("strlen = %d \n", myStrlen(strSrc));
-    
-    char *str2 = ".cn";
-    printf("str = %s\n", myStrcat(strSrc, str2));
-    
-    int a[] = {1, 2, 3, 4, 5};
-    printf("%lu \n", sizeof(a));
-
-    char *b = "www.google.com";
-    printf(" b %s \n ", b);
+//    printf("strlen = %d \n", myStrlen(strSrc));
+//    
+//    char *str2 = ".cn";
+//    printf("str = %s\n", myStrcat(strSrc, str2));
     
 }
 
+void sort() {
+    
+    int a[] = {6, 1, 2, 7, 9, 3, 4, 5, 10, 8};
+//    bubleSort(a, 10);
+    
+//    quickSort(a, 0, 9);
+    
+    quickSort2(a, 0, 9);
+    
+    for (int i = 0; i < 10; i ++) {
+        printf("%d ", a[i]);
+    }
+    
+    
+    printf("\n");
+}
+
+
 int main(int argc, const char * argv[]) {
     
-    testMyStrCopy();
+//    testMyStrCopy();
+    
+    sort();
     
     return 0;
 }

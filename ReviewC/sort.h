@@ -11,4 +11,10 @@
 
 #include <stdio.h>
 
+void bubleSort(int a[], int n);
+
+void quickSort(int a[], int low, int high);
+void quickSort2(int a[], int left, int right);
+
+
 #endif /* sort_h */

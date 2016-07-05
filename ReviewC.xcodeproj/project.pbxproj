@@ -69,10 +69,10 @@
 				D9A6BB401D20EADF0027A677 /* main.c */,
 				D9A6BB481D20EAFA0027A677 /* string.h */,
 				D9A6BB471D20EAFA0027A677 /* string.c */,
-				D92880411D2A01E1001545B3 /* sort.c */,
 				D92880421D2A01E1001545B3 /* sort.h */,
-				D92880441D2A0234001545B3 /* search.c */,
+				D92880411D2A01E1001545B3 /* sort.c */,
 				D92880451D2A0234001545B3 /* search.h */,
+				D92880441D2A0234001545B3 /* search.c */,
 			);
 			path = ReviewC;
 			sourceTree = "<group>";
