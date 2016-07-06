@@ -9,7 +9,8 @@
 // 假设计算机每秒钟运行 10亿 次
 
 /**
- *  排序算法
+ *  排序算法 http://www.cnblogs.com/kkun/archive/2011/11/23/2260312.html
+ *  算法复杂度 http://www.cnblogs.com/nannanITeye/archive/2013/04/11/3013737.html
  */
 
 #include "sort.h"
@@ -137,8 +138,46 @@ void selectSort(int a[], int n) {
 
 /**
  *  归并排序
+    把原始数组分成若干子数组，对每一个子数组进行排序，继续把子数组与子数组合并，合并后仍然有序，直到全部合并完，形成有序的数组
+ 
+    设数列长为N， 将数列分开成小数列一共要logN步，每步都是一个合并有序数列的过程，时间复杂度记为O(N),故一共O(N*logN)
  */
 
+void mergeArray(int a[], int first, int mid, int last, int temp[]) {
+    
+    int i = first, j = mid + 1;
+    int m = mid, n = last;
+    int k = 0;
+    
+    while (i <= m && j <= n) {
+        
+        if (a[i] <= a[j]) {
+            temp[k++] = a[i++];
+        }
+        else {
+            temp[k++] = a[j++];
+        }
+    }
+    
+    while (i <= m) {
+        temp[k++] = a[i++];
+    }
+    
+    for (i = 0; i < k; i ++) {
+        a[first + i] = temp[i];
+    }
+}
+
+void mergeSort(int a[], int first, int last, int temp[]) {
+    
+    if (first < last) {
+        
+        int mid = (first + last) / 2;
+        mergeSort(a, first, mid, temp);         // 左边有序
+        mergeSort(a, mid + 1, last, temp);      // 右边有序
+        mergeArray(a, first, mid, last, temp);  // 再将两个有序数组合并
+    }
+}
 
 /**
  *  希尔排序
@@ -150,11 +189,27 @@ void selectSort(int a[], int n) {
 
 /**
  *  直接插入排序
+ 插入排序就是每一步都将一个待排序数据按其大小，插入到已经排序的数据中的适当位置，直到全部插入完毕
+ 时间复杂度 O(n2) 最好O(n)
  */
 
-/**
- *  带哨兵的直接插入排序呢
- */
+void insertionSort(int a[], int n) {
+    
+    for (int i = 1; i < n; i++) {
+        if (a[i - 1] > a[i]) {
+            
+            int temp = a[i];
+            int j = i;
+            while (j > 0 && a[j - 1] > temp) {
+                a[j] = a[j - 1];
+                j--;
+            }
+            a[j] = temp;
+        }
+    }
+    
+}
+
 
 
 
