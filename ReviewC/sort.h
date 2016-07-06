@@ -22,4 +22,5 @@ void insertionSort(int a[], int n);
 
 void mergeSort(int a[], int first, int last, int temp[]);
 
+void shellSort(int a[], int n);
 #endif /* sort_h */

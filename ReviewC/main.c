@@ -43,9 +43,10 @@ void sort() {
 //    selectSort(a, 10);
     
 //    insertionSort(a, 10);
-    int temp[10];
-    mergeSort(a, 0, 9, temp);
+//    int temp[10];
+//    mergeSort(a, 0, 9, temp);
     
+    shellSort(a, 10);
     for (int i = 0; i < 10; i ++) {
         printf("%d ", a[i]);
     }

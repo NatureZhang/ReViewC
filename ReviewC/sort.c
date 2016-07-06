@@ -183,6 +183,22 @@ void mergeSort(int a[], int first, int last, int temp[]) {
  *  希尔排序
  */
 
+void shellSort(int a[], int n) {
+    int group, i, j, temp;
+    for (group = n / 2; group > 0; group /= 2) {
+        for (i = group; i < n; i++) {
+            
+            for (j = i - group; j >= 0; j-= group) {
+                if (a[j] > a[j + group]) {
+                    temp = a[j];
+                    a[j] = a[j + group];
+                    a[j + group] = temp;
+                }
+            }
+        }
+    }
+}
+
 /**
  *  堆排序
  */
