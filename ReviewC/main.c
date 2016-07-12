@@ -14,6 +14,7 @@
 #include <string.h>
 #include "string.h"
 #include "sort.h"
+#include "link.h"
 #define STR_LEN 30
 
 void testMyStrCopy() {
@@ -55,12 +56,32 @@ void sort() {
     printf("\n");
 }
 
-
+void list(){
+    List list;
+    position np;
+    
+    int i;
+    int a[] = {1, 3, 5, 7, 9};
+    list = init_list();
+    print_list(list);
+    
+    for (i = 4; i >= 0; i--) {
+        insert_node(list, a[i]);
+    }
+    print_list(list);
+    
+    np = find_value(list, 5);
+    delete_node(list, np);
+    print_list(list);
+    
+}
 int main(int argc, const char * argv[]) {
     
 //    testMyStrCopy();
     
-    sort();
+//    sort();
+    
+//    list();
     
     return 0;
 }

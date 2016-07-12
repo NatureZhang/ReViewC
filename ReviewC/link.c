@@ -115,7 +115,7 @@ void print_list(List L) {
     np = L;
     while (np ->next != NULL) {
         np = np -> next;
-        printf("%p: %d", np, np -> element);
+        printf("%p: %d \n", np, np -> element);
     }
     
     printf("\n");
