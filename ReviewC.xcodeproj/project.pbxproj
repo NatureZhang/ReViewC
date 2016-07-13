@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D9213D611D35D73000A110B8 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = D9213D5F1D35D73000A110B8 /* stack.c */; };
 		D92880431D2A01E1001545B3 /* sort.c in Sources */ = {isa = PBXBuildFile; fileRef = D92880411D2A01E1001545B3 /* sort.c */; };
 		D92880461D2A0234001545B3 /* search.c in Sources */ = {isa = PBXBuildFile; fileRef = D92880441D2A0234001545B3 /* search.c */; };
 		D92C6C4A1D3339F9001ED3AF /* link.c in Sources */ = {isa = PBXBuildFile; fileRef = D92C6C481D3339F9001ED3AF /* link.c */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D9213D5F1D35D73000A110B8 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
+		D9213D601D35D73000A110B8 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
 		D92880411D2A01E1001545B3 /* sort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sort.c; sourceTree = "<group>"; };
 		D92880421D2A01E1001545B3 /* sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sort.h; sourceTree = "<group>"; };
 		D92880441D2A0234001545B3 /* search.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = search.c; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				D92880441D2A0234001545B3 /* search.c */,
 				D92C6C491D3339F9001ED3AF /* link.h */,
 				D92C6C481D3339F9001ED3AF /* link.c */,
+				D9213D601D35D73000A110B8 /* stack.h */,
+				D9213D5F1D35D73000A110B8 /* stack.c */,
 			);
 			path = ReviewC;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9213D611D35D73000A110B8 /* stack.c in Sources */,
 				D92C6C4A1D3339F9001ED3AF /* link.c in Sources */,
 				D92880431D2A01E1001545B3 /* sort.c in Sources */,
 				D9A6BB491D20EAFA0027A677 /* string.c in Sources */,

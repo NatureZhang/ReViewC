@@ -15,6 +15,7 @@
 #include "string.h"
 #include "sort.h"
 #include "link.h"
+#include "stack.h"
 #define STR_LEN 30
 
 void testMyStrCopy() {
@@ -75,6 +76,25 @@ void list(){
     print_list(list);
     
 }
+
+void stacktest(){
+    ElementTy a;
+    int i;
+    stack sk;
+    sk = init_stack();
+    push(sk, 1);
+    push(sk, 2);
+    push(sk, 8);
+    printf("stack is null? %d\n", is_empty(sk));
+    for (i = 0; i < 3; i ++) {
+        a = pop(sk);
+        printf("pop: %d\n", a);
+    }
+    
+    printf("stack is null? %d \n", is_empty(sk));
+    delete_stack(sk);
+}
+
 int main(int argc, const char * argv[]) {
     
 //    testMyStrCopy();
@@ -82,6 +102,8 @@ int main(int argc, const char * argv[]) {
 //    sort();
     
 //    list();
+    
+    stacktest();
     
     return 0;
 }
