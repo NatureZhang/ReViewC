@@ -11,6 +11,7 @@
 		D92880431D2A01E1001545B3 /* sort.c in Sources */ = {isa = PBXBuildFile; fileRef = D92880411D2A01E1001545B3 /* sort.c */; };
 		D92880461D2A0234001545B3 /* search.c in Sources */ = {isa = PBXBuildFile; fileRef = D92880441D2A0234001545B3 /* search.c */; };
 		D92C6C4A1D3339F9001ED3AF /* link.c in Sources */ = {isa = PBXBuildFile; fileRef = D92C6C481D3339F9001ED3AF /* link.c */; };
+		D952BEB71D3727D5004DF7B9 /* queue.c in Sources */ = {isa = PBXBuildFile; fileRef = D952BEB51D3727D5004DF7B9 /* queue.c */; };
 		D9A6BB411D20EADF0027A677 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D9A6BB401D20EADF0027A677 /* main.c */; };
 		D9A6BB491D20EAFA0027A677 /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = D9A6BB471D20EAFA0027A677 /* string.c */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,8 @@
 		D92880451D2A0234001545B3 /* search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = search.h; sourceTree = "<group>"; };
 		D92C6C481D3339F9001ED3AF /* link.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = link.c; sourceTree = "<group>"; };
 		D92C6C491D3339F9001ED3AF /* link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = link.h; sourceTree = "<group>"; };
+		D952BEB51D3727D5004DF7B9 /* queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = queue.c; sourceTree = "<group>"; };
+		D952BEB61D3727D5004DF7B9 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 		D9A6BB3D1D20EADF0027A677 /* ReviewC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReviewC; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A6BB401D20EADF0027A677 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D9A6BB471D20EAFA0027A677 /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string.c; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				D92C6C481D3339F9001ED3AF /* link.c */,
 				D9213D601D35D73000A110B8 /* stack.h */,
 				D9213D5F1D35D73000A110B8 /* stack.c */,
+				D952BEB61D3727D5004DF7B9 /* queue.h */,
+				D952BEB51D3727D5004DF7B9 /* queue.c */,
 			);
 			path = ReviewC;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				D9213D611D35D73000A110B8 /* stack.c in Sources */,
 				D92C6C4A1D3339F9001ED3AF /* link.c in Sources */,
 				D92880431D2A01E1001545B3 /* sort.c in Sources */,
+				D952BEB71D3727D5004DF7B9 /* queue.c in Sources */,
 				D9A6BB491D20EAFA0027A677 /* string.c in Sources */,
 				D9A6BB411D20EADF0027A677 /* main.c in Sources */,
 				D92880461D2A0234001545B3 /* search.c in Sources */,

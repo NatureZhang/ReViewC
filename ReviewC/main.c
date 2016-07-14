@@ -16,6 +16,7 @@
 #include "sort.h"
 #include "link.h"
 #include "stack.h"
+#include "queue.h"
 #define STR_LEN 30
 
 void testMyStrCopy() {
@@ -95,6 +96,26 @@ void stacktest(){
     delete_stack(sk);
 }
 
+void queuetest(){
+    
+    int a;
+    int i;
+    queue queue;
+    queue = init_queue();
+    
+    enqueue(queue, 1);
+    enqueue(queue, 2);
+    enqueue(queue, 8);
+    printf("Queue is null?%d\n", is_emptyq(queue));
+    for (i = 0; i < 3; i ++) {
+        a = dequeue(queue);
+        printf("dequeue:%d\n", a);
+    }
+    
+    printf("Queue is null?%d\n", is_emptyq(queue));
+    delete_queue(queue);
+}
+
 int main(int argc, const char * argv[]) {
     
 //    testMyStrCopy();
@@ -103,7 +124,8 @@ int main(int argc, const char * argv[]) {
     
 //    list();
     
-    stacktest();
+//    stacktest();
+    queuetest();
     
     return 0;
 }
