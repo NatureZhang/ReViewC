@@ -14,9 +14,11 @@
 #include <string.h>
 #include "string.h"
 #include "sort.h"
+#include "search.h"
 #include "link.h"
 #include "stack.h"
 #include "queue.h"
+#include "HashTable.h"
 #define STR_LEN 30
 
 void testMyStrCopy() {
@@ -56,6 +58,12 @@ void sort() {
     
     
     printf("\n");
+}
+
+void search() {
+    int a[] = {2, 4, 7, 3, 8, 1};
+    int position = binarySearch(a, 6, 7);
+    printf("查找元素位于 %d 位置\n", position);
 }
 
 void list(){
@@ -116,16 +124,45 @@ void queuetest(){
     delete_queue(queue);
 }
 
+void hashTable(){
+    
+    int result;
+    HashTable hashTable;
+    int a[HASHSIZE] = {13, 29, 27, 28, 26, 30, 38};
+    
+    init_hashTable(&hashTable);
+    
+    for (int i = 0; i < HASHSIZE; i++) {
+        insert_hashTable(&hashTable, a[i]);
+    }
+    
+    print_hashTable(&hashTable);
+    
+    int search = 28;
+    
+    result = search_hashTable(&hashTable, search);
+    if (result == -1) {
+        printf("对不起，没有找到");
+    }
+    else{
+        printf("%d在哈希表中的位置是：%d\n", search, result);
+    }
+}
+
 int main(int argc, const char * argv[]) {
     
 //    testMyStrCopy();
     
 //    sort();
     
+//    search();
+    
 //    list();
     
 //    stacktest();
-    queuetest();
+//    queuetest();
+    
+    hashTable();
     
     return 0;
 }

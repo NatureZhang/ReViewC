@@ -11,4 +11,7 @@
 
 #include <stdio.h>
 
+
+int binarySearch(int a[], int n, int key);
+
 #endif /* search_h */
