@@ -14,6 +14,7 @@
 		D952BEB71D3727D5004DF7B9 /* queue.c in Sources */ = {isa = PBXBuildFile; fileRef = D952BEB51D3727D5004DF7B9 /* queue.c */; };
 		D9A6BB411D20EADF0027A677 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = D9A6BB401D20EADF0027A677 /* main.c */; };
 		D9A6BB491D20EAFA0027A677 /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = D9A6BB471D20EAFA0027A677 /* string.c */; };
+		F433346B1D9D7855003C8436 /* HashTable_new.c in Sources */ = {isa = PBXBuildFile; fileRef = F43334691D9D7855003C8436 /* HashTable_new.c */; };
 		F4C880A91D980C91005BF3B9 /* HashTable.c in Sources */ = {isa = PBXBuildFile; fileRef = F4C880A71D980C91005BF3B9 /* HashTable.c */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		D9A6BB401D20EADF0027A677 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		D9A6BB471D20EAFA0027A677 /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string.c; sourceTree = "<group>"; };
 		D9A6BB481D20EAFA0027A677 /* string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string.h; sourceTree = "<group>"; };
+		F43334691D9D7855003C8436 /* HashTable_new.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HashTable_new.c; sourceTree = "<group>"; };
+		F433346A1D9D7855003C8436 /* HashTable_new.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable_new.h; sourceTree = "<group>"; };
 		F4C880A71D980C91005BF3B9 /* HashTable.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HashTable.c; sourceTree = "<group>"; };
 		F4C880A81D980C91005BF3B9 /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +86,8 @@
 				D9A6BB471D20EAFA0027A677 /* string.c */,
 				F4C880A81D980C91005BF3B9 /* HashTable.h */,
 				F4C880A71D980C91005BF3B9 /* HashTable.c */,
+				F433346A1D9D7855003C8436 /* HashTable_new.h */,
+				F43334691D9D7855003C8436 /* HashTable_new.c */,
 				D92880421D2A01E1001545B3 /* sort.h */,
 				D92880411D2A01E1001545B3 /* sort.c */,
 				D92880451D2A0234001545B3 /* search.h */,
@@ -160,6 +165,7 @@
 				D952BEB71D3727D5004DF7B9 /* queue.c in Sources */,
 				D9A6BB491D20EAFA0027A677 /* string.c in Sources */,
 				D9A6BB411D20EADF0027A677 /* main.c in Sources */,
+				F433346B1D9D7855003C8436 /* HashTable_new.c in Sources */,
 				D92880461D2A0234001545B3 /* search.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

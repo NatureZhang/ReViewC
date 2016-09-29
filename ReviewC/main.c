@@ -19,6 +19,7 @@
 #include "stack.h"
 #include "queue.h"
 #include "HashTable.h"
+#include "HashTable_new.h"
 #define STR_LEN 30
 
 void testMyStrCopy() {
@@ -148,6 +149,25 @@ void hashTable(){
         printf("%d在哈希表中的位置是：%d\n", search, result);
     }
 }
+void hashTable_new() {
+    hashTable_new * hashtable = hashtable_init(10);
+    hashtable_put(hashtable, "a", "1");
+    hashtable_put(hashtable, "b", "2");
+    hashtable_put(hashtable, "c", "3");
+    hashtable_put(hashtable, "d", "4");
+    hashtable_put(hashtable, "e", "5");
+    hashtable_put(hashtable, "f", "6");
+    hashtable_put(hashtable, "g", "7");
+    hashtable_put(hashtable, "h", "8");
+    hashtable_put(hashtable, "i", "9");
+    hashtable_put(hashtable, "j", "10");
+    hashtable_put(hashtable, "k", "11");
+    hashtable_put(hashtable, "l", "12");
+    hashtable_put(hashtable, "f", "8");
+    hashtable_remove(hashtable, "f");
+    hashtable_print(hashtable);
+
+}
 
 int main(int argc, const char * argv[]) {
     
@@ -163,6 +183,8 @@ int main(int argc, const char * argv[]) {
 //    queuetest();
     
     hashTable();
+    
+    
     
     return 0;
 }
