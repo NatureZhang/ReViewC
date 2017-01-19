@@ -22,10 +22,10 @@
 #include "HashTable_new.h"
 #define STR_LEN 30
 
-void testMyStrCopy() {
+void myStr() {
     
-    char *strSrc = "www.baidu.com";
-    char a[80];
+//    char *strSrc = "www.baidu.com";
+//    char a[80];
     
     // fuck 怎么不管用
 //    printf("copy str:%s \n", myStrCopy(a,));
@@ -35,6 +35,15 @@ void testMyStrCopy() {
 //    char *str2 = ".cn";
 //    printf("str = %s\n", myStrcat(strSrc, str2));
     
+    char dst[20] = "zhangdong, ";
+    char *catStr = myStrcat(dst, "hello");
+    printf("%s\n", catStr);
+    
+    int strCmp = myStrcmp(dst, "zhangdong");
+    printf("%d \n", strCmp);
+    
+    myStrRev(catStr);
+    printf("%s\n", catStr);
 }
 
 void sort() {
@@ -149,29 +158,29 @@ void hashTable(){
         printf("%d在哈希表中的位置是：%d\n", search, result);
     }
 }
-void hashTable_new() {
-    hashTable_new * hashtable = hashtable_init(10);
-    hashtable_put(hashtable, "a", "1");
-    hashtable_put(hashtable, "b", "2");
-    hashtable_put(hashtable, "c", "3");
-    hashtable_put(hashtable, "d", "4");
-    hashtable_put(hashtable, "e", "5");
-    hashtable_put(hashtable, "f", "6");
-    hashtable_put(hashtable, "g", "7");
-    hashtable_put(hashtable, "h", "8");
-    hashtable_put(hashtable, "i", "9");
-    hashtable_put(hashtable, "j", "10");
-    hashtable_put(hashtable, "k", "11");
-    hashtable_put(hashtable, "l", "12");
-    hashtable_put(hashtable, "f", "8");
-    hashtable_remove(hashtable, "f");
-    hashtable_print(hashtable);
-
-}
+//void hashTable_new() {
+//    hashTable_new * hashtable = hashtable_init(10);
+//    hashtable_put(hashtable, "a", "1");
+//    hashtable_put(hashtable, "b", "2");
+//    hashtable_put(hashtable, "c", "3");
+//    hashtable_put(hashtable, "d", "4");
+//    hashtable_put(hashtable, "e", "5");
+//    hashtable_put(hashtable, "f", "6");
+//    hashtable_put(hashtable, "g", "7");
+//    hashtable_put(hashtable, "h", "8");
+//    hashtable_put(hashtable, "i", "9");
+//    hashtable_put(hashtable, "j", "10");
+//    hashtable_put(hashtable, "k", "11");
+//    hashtable_put(hashtable, "l", "12");
+//    hashtable_put(hashtable, "f", "8");
+//    hashtable_remove(hashtable, "f");
+//    hashtable_print(hashtable);
+//
+//}
 
 int main(int argc, const char * argv[]) {
     
-//    testMyStrCopy();
+    myStr();
     
 //    sort();
     
@@ -182,7 +191,7 @@ int main(int argc, const char * argv[]) {
 //    stacktest();
 //    queuetest();
     
-    hashTable();
+//    hashTable();
     
     
     

@@ -14,7 +14,7 @@
 typedef struct HashNode{
     char* key;
     char* value;
-    HashNode* next; //相同hash取下一个节点
+    struct HashNode* next; //相同hash取下一个节点
 } HashNode;
 
 

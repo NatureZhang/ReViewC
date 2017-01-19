@@ -36,17 +36,44 @@ int myStrlen(const char *strSrc) {
 }
 
 // 字符串拼接
-char *myStrcat(char *dest, const char *strSrc) {
+char *myStrcat(char *dst, const char *src) {
     
-    return NULL;
+    char *cp = dst;
+    
+    while (*cp) {
+        cp ++;
+    }
+    
+    while ((*cp++ = *src++)) {
+        
+    }
+    
+    return dst;
+    
 }
 
+// 比较
+int	 myStrcmp(const char *str1, const char *str2) {
+    while (*str1 && *str2 && *str1 == *str2) {
+        ++str1;
+        ++str2;
+    }
+    
+    return *str1 - *str2;
+}
 
-//
-//// 比较
-//int	 myStrcmp(const char *str1, const char *str2) {
-//    
-//}
+void myStrRev(char *str) {
+    
+    char temp, *end = str + myStrlen(str) - 1;
+    while (end > str) {
+        temp = *str;
+        *str = *end;
+        *end = temp;
+        
+        --end;
+        ++str;
+    }
+}
 
 // 小写
 void strlower(char *strSrc) {
