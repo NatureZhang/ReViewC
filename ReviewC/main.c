@@ -44,6 +44,9 @@ void myStr() {
     
     myStrRev(catStr);
     printf("%s\n", catStr);
+    
+    int strInt = myStrToInt("2345678");
+    printf("%d\n", strInt);
 }
 
 void sort() {
@@ -177,6 +180,8 @@ void hashTable(){
 //    hashtable_print(hashtable);
 //
 //}
+
+/// 人必须学会，放下无用的恐惧，将全部精力，专注于事情本身
 
 int main(int argc, const char * argv[]) {
     

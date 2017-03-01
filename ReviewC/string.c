@@ -7,6 +7,8 @@
 //
 
 #include "string.h"
+#include <stdbool.h>
+#include <string.h>
 char *myStrCopy(char *strCpy, const char *strSrc) {
     
     if (strCpy == NULL || strSrc == NULL) {
@@ -82,5 +84,69 @@ void strlower(char *strSrc) {
 
 // 大写
 void strupper(char *strSrc) {
+    
+}
+
+//辅助方法 判断是否数字字符
+bool isDigit(char ch) {
+    return '0'<=ch && ch<='9';
+}
+
+typedef enum {VALID, INVALID} ResType; //返回的结果类型
+ResType g_rtRes = VALID;
+
+// 字符转Int
+int myStrToInt(const char *str) {
+    
+    unsigned int iCur, iMax;
+    int sign;
+    const char *p;
+    
+    // 判断参数是否合法
+    if (!str || strlen(str) <= 0) {
+        g_rtRes = INVALID;
+        return 0;
+    }
+    
+    // 去掉前面空格
+    for (p = str; ' ' == *p; p++) {
+        
+    }
+    
+    // 判断正负号
+    sign = 1;
+    iMax = ~(1 << (8 * sizeof(int) - 1));
+    if (*p == '+') {
+        p ++;
+    }
+    else if (*p == '-') {
+        p ++;
+        sign = -1;
+        iMax = ~iMax;
+    }
+    
+    // 首位不是数字，输入非法
+    if (!isDigit(*p)) {
+        g_rtRes = INVALID;
+        return 0;
+    }
+    
+    // 首位是0，特殊处理
+    if ('0' == *p) {
+        return 0;
+    }
+    
+    // 累和
+    for (iCur = 0; isDigit(*p) && iCur <= iMax; p++) {
+        iCur = iCur * 10 + (*p - '0');
+    }
+    
+    // 返回结果
+    if(iCur <= iMax) {
+        return (int)(sign * iCur);
+    } else {
+        g_rtRes = INVALID;
+        return 0;
+    }
     
 }

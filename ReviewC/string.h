@@ -32,4 +32,5 @@ void strlower(char *strSrc);
 // 大写
 void strupper(char *strSrc);
 
+int myStrToInt(const char *str);
 #endif /* string_h */
