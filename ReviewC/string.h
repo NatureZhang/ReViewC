@@ -32,5 +32,13 @@ void strlower(char *strSrc);
 // 大写
 void strupper(char *strSrc);
 
+// 字符串转数字
 int myStrToInt(const char *str);
+
+// 替换字符串中的空格为 %20
+void replaceBlank(char string[], int length);
+
+// 判断是否为有效的ip地址
+int isIPValid(char *ip );
+
 #endif /* string_h */

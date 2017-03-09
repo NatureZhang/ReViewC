@@ -45,8 +45,15 @@ void myStr() {
     myStrRev(catStr);
     printf("%s\n", catStr);
     
-    int strInt = myStrToInt("2345678");
+    int strInt = myStrToInt("-2345678");
     printf("%d\n", strInt);
+    
+    char string[] = "we are happy.";
+    replaceBlank(string, 14);
+    printf("%s\n", string);
+    
+    char *ip = "127.068.1.10";
+    printf("%d\n", isIPValid(ip));
 }
 
 void sort() {

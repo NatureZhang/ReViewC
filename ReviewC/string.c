@@ -150,3 +150,114 @@ int myStrToInt(const char *str) {
     }
     
 }
+
+// 替换字符串中的空格为 %20 从后向前
+void replaceBlank(char string[], int length) {
+    
+    if (string == NULL || length <= 0) {
+        return;
+    }
+
+    int blank = 0;
+    int nLength = 0;
+    
+    for (int i = 0; i < length; i ++) {
+        if (string[i] == ' ') {
+            blank ++;
+        }
+    }
+    
+    nLength = length + blank * 2;
+    
+    for (int j = length; j >= 0; j--) {
+        
+        if (string[j] != ' ') {
+            string[nLength] = string[j];
+            nLength --;
+        }
+        else {
+            string[nLength --] = '0';
+            string[nLength --] = '2';
+            string[nLength --] = '%';
+        }
+    }
+}
+
+// 判断有效的ip地址
+int isIPValid(char *ip ){
+    
+    int p[4] ={0,0,0,0};
+    int len = myStrlen(ip);
+    int j = 0;
+    int head = 0;
+    for(int i = 0; i < len; i++){
+        if(ip[i] == '.' || i == len -1 ){
+            /*分割符*/
+            if(p[j] >= 0 && p[j] <= 255){
+                printf("%d\n", p[j]);
+                j ++;
+                head = 0;
+            }else{
+                return 0;
+            }
+            
+        }else{
+            
+            if (head == 0 && ip[i] == '0') {
+                return 0;
+            }
+            else {
+                head = 1;
+            }
+            
+            int d = ip[i] - '0';
+            if(d > 9 || d < 0){
+                return 0;
+            }else{
+                p[j] = p[j] * 10 + d;
+            }
+        }
+    }
+    return 1;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
