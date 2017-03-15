@@ -67,32 +67,28 @@ void quickSort(int a[], int low, int high) {
     quickSort(a, i + 1, high);
 }
 
-
-// 这个是比较好理解的
-void quickSort2(int a[], int left, int right) {
+int partition(int a[], int left, int right){
     
-    int i , j, t, temp;
-    if (left > right) {
-        return;
+    if (a == NULL || left < 0 || left > right) {
+        return -1;
     }
     
-    temp = a[left]; // temp 中存的数，就是基准数
+    int i, j, t, tmp;
+    tmp = a[left];
     i = left;
     j = right;
     
-    while (i !=  j) {
+    while (i != j) {
         
-        // 顺序很重要，要先从右边开始找
-        while (a[j] >= temp && i < j) {
+        //从右往前找
+        while (a[j] >= tmp && i < j) {
             j --;
         }
         
-        // 再找左边的
-        while (a[i] <= temp && i < j) {
+        while (a[i] <= tmp && i < j) {
             i ++;
         }
         
-        // 交换两个数在数组中的位置
         if (i < j) {
             t = a[i];
             a[i] = a[j];
@@ -103,9 +99,54 @@ void quickSort2(int a[], int left, int right) {
     
     // 最终将基准数 归位
     a[left] = a[i];
-    a[i] = temp;
+    a[i] = tmp;
+
+    return i;
+}
+
+// 这个是比较好理解的
+void quickSort2(int a[], int left, int right) {
     
+//    int i , j, t, temp;
+//    if (left > right) {
+//        return;
+//    }
+//    
+//    temp = a[left]; // temp 中存的数，就是基准数
+//    i = left;
+//    j = right;
+//    
+//    while (i !=  j) {
+//        
+//        // 顺序很重要，要先从右边开始找
+//        while (a[j] >= temp && i < j) {
+//            j --;
+//        }
+//        
+//        // 再找左边的
+//        while (a[i] <= temp && i < j) {
+//            i ++;
+//        }
+//        
+//        // 交换两个数在数组中的位置
+//        if (i < j) {
+//            t = a[i];
+//            a[i] = a[j];
+//            a[j] = t;
+//        }
+//        
+//    }
+//    
+//    // 最终将基准数 归位
+//    a[left] = a[i];
+//    a[i] = temp;
+    
+    int i = partition(a, left, right);
+    
+    if (i > left)
     quickSort2(a, left, i - 1); // 继续处理左边的，递归
+    
+    if (i < right)
     quickSort2(a, i + 1, right);// 继续处理右边的，递归
 }
 

@@ -10,3 +10,9 @@
 /// http://blog.csdn.net/fansongy/article/details/6798278  这篇文章写得不错
 
 #include "BinTree.h"
+typedef struct BinaryTreeNode BinaryTreeNode;
+struct BinaryTreeNode {
+    int value;
+    BinaryTreeNode * left;
+    BinaryTreeNode * right;
+};

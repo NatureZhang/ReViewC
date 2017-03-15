@@ -20,6 +20,7 @@
 #include "queue.h"
 #include "HashTable.h"
 #include "HashTable_new.h"
+
 #define STR_LEN 30
 
 void myStr() {
@@ -54,6 +55,8 @@ void myStr() {
     
     char *ip = "127.068.1.10";
     printf("%d\n", isIPValid(ip));
+    
+    printf("stringlen %lu\n", strlen("zhangdong")); //库函数的strlen中长度不含最后一位
 }
 
 void sort() {
@@ -63,7 +66,7 @@ void sort() {
     
 //    quickSort(a, 0, 9);
     
-//    quickSort2(a, 0, 9);
+    quickSort2(a, 0, 9);
     
 //    selectSort(a, 10);
     
@@ -71,12 +74,12 @@ void sort() {
 //    int temp[10];
 //    mergeSort(a, 0, 9, temp);
     
-    shellSort(a, 10);
+//    shellSort(a, 10);
+    
+    
     for (int i = 0; i < 10; i ++) {
         printf("%d ", a[i]);
     }
-    
-    
     printf("\n");
 }
 
@@ -192,9 +195,9 @@ void hashTable(){
 
 int main(int argc, const char * argv[]) {
     
-    myStr();
+//    myStr();
     
-//    sort();
+    sort();
     
 //    search();
     
